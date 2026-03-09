@@ -1,0 +1,134 @@
+:root {
+    --overlay-color: rgba(80, 161, 255, 0.3);
+}
+
+hr {
+    color: var(--def-color);
+}
+
+body {
+    background-color: #101b2c;
+    color: rgb(212, 212, 212);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    color: cadetblue;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 75px;
+}
+
+@media (min-width: 769px) {
+    .header {
+        font-size: 30px;
+    }
+
+    .emphasis {
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .text {
+        font-size: 22px;
+    }
+
+    .flex-bar {
+        padding: 10px;
+        width: 70%;
+        height: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+    }
+}
+
+.flex-item {
+    padding: 10px;
+    margin: 10px;
+    width: 70%;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--overlay-color);
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-left: 0px;
+    }
+
+    .emphasis {
+        font-weight: 600;
+    }
+}
+
+.icon {
+    height: 90px;
+    margin-top: -60px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.button {
+    margin: 5px;
+    padding: 5px;
+    background-color: #cecfc7;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: rgb(126, 126, 126);
+    transition: 0.2s;
+}
+
+a {
+    text-decoration: underline;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#info2 {
+    display: none;
+}
+
+.margin20 {
+    margin: 20px;
+}
+
+.footer {
+    font-size: 15px;
+    text-align: center;
+}
+
+.text li {
+    margin: 20px 0px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+.griditem {
+    width: 30%;
+    height: 30%;
+    margin: 5px;
+}

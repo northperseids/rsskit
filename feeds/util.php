@@ -3,11 +3,11 @@
 // constants for easy access
 define('USERAGENT', 'Neartsua (neartsua.me) PluralKit RSS Feed Generator (rsskit.neartsua.me)');
 define('PKAPIURL', 'https://api.pluralkit.me/v2/systems/');
-define('BASEURL', 'https://rsskit.neartsua.me/');
-define('FEEDURL', 'https://rsskit.neartsua.me/feeds/feed.php?id=');
 
 $localconfig = parse_ini_file('./localconfig.ini');
 define('CONFIGFILE', $localconfig['deploy']);
+define('BASEURL', $localconfig['deploy_url']);
+define('FEEDURL', $localconfig['deploy_url'] . '/feeds/feed.php?id=');
 
 function queryPK($pkid, $option)
 {

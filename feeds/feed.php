@@ -17,7 +17,7 @@ if (array_key_exists('id', $_GET)) {
             die("Error fetching PluralKit information." . $fronterQuery[0]);
         } else {
 
-            header("Content-type: text/xml");
+            header("Content-Type: application/xml; charset=utf-8");
 
             $fronters = json_decode($fronterQuery[1]);
             $system = json_decode($systemQuery[1]);
@@ -27,27 +27,29 @@ if (array_key_exists('id', $_GET)) {
 
             $membersArray = $fronters->members;
 
-            echo '<?xml version="1.0" encoding="UTF-8" ?>
-        <rss version="2.0">
-        <channel>
-            <title>' . $systemName . '</title>
-            <link>' . BASEURL . '</link>
-            <description>Current Fronters</description>';
+            echo '<?xml version="1.0" encoding="UTF-8" ?>' . PHP_EOL;
+        }
+    }
+}
+?>
 
-            if (count($membersArray) == 0) {
-                echo "<item>
+<rss version="2.0">
+    <channel>
+        <title><?php echo $systemName; ?></title>
+        <link>https://rsskit.neartsua.me/</link>
+        <description>Current Fronters</description>
+        <?php
+        if (count($membersArray) == 0) {
+            echo "<item>
                     <title>No fronters listed.</title>
                 </item>";
-            } else {
-                foreach ($membersArray as $member) {
+        } else {
+            foreach ($membersArray as $member) {
                 echo "<item>
                     <title>" . $member->name . "</title>
                 </item>";
             }
-            }
-
-            echo '</channel>
-                </rss>';
         }
-    }
-}
+        ?>
+    </channel>
+</rss>

@@ -7,7 +7,7 @@ define('BASEURL', 'http://localhost/rsskit/');
 define('FEEDURL', 'http://localhost/rsskit/feeds/feed.php?id=');
 
 $localconfig = parse_ini_file('./localconfig.ini');
-define('CONFIGFILE', $localconfig['local']);
+define('CONFIGFILE', $localconfig['deploy']);
 
 function queryPK($pkid, $option)
 {

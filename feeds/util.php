@@ -7,7 +7,7 @@ define('PKAPIURL', 'https://api.pluralkit.me/v2/systems/');
 $localconfig = parse_ini_file('./localconfig.ini');
 define('CONFIGFILE', $localconfig['deploy']);
 define('BASEURL', $localconfig['deploy_url']);
-define('FEEDURL', $localconfig['deploy_url'] . '/feeds/feed.php?id=');
+define('FEEDURL', $localconfig['deploy_url'] . 'feeds/feed.php?id=');
 
 function queryPK($pkid, $option)
 {

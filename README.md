@@ -1,6 +1,6 @@
 # RSSKit | PluralKit Fronters RSS Feed Generator
 
-So friends can use RSS feeds to get updates about switches!
+So friends can use RSS feeds to see who's fronting!
 
 *Transparently, I don't have a huge personal infrastructure and I am one\* person! You're welcome to try to host your own version, though. You'll need a MySQL database and a web server capable of hosting PHP files, and the (very simple) database structure is included in `data/rsskit.sql`.*
 

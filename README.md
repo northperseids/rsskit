@@ -14,4 +14,4 @@ then click Create. You will be directed to an XML RSS feed. Copy the URL and use
 If you want to remove your RSS feed, enter your system ID and token, and then click Remove instead.
 
 ## URL
-If you lose your feed URL, it's always going to be `https://rsskit.neartsua.me/feeds/feed.php?=[SYSTEMID]` where [SYSTEMID] is your 5- or 6-letter PluralKit ID. You can also resubmit with your ID and token if you want.
+If you lose your feed URL, it's always going to be `https://rsskit.neartsua.me/feeds/feed.php?id=[SYSTEMID]` where [SYSTEMID] is your 5- or 6-letter PluralKit ID. You can also resubmit with your ID and token if you want.

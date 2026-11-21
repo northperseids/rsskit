@@ -9,6 +9,8 @@ if (array_key_exists('id', $_GET)) {
 
     if (!$check) {
         die('No system with that ID has created an RSS feed yet.');
+    } else if ($check === "invalid") {
+        die('Invalid ID.');
     } else {
         $fronterQuery = queryPK($pkid, 'front');
         $systemQuery = queryPK($pkid, 'sys');

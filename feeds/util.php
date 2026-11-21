@@ -51,6 +51,12 @@ function pkDBConnect()
 
 function addFeed($pkid)
 {
+    if (!ctype_alpha($pkid)) {
+        return false;
+    }
+    if (!strlen($pkid) == 5 && !strlen($pkid) != 6) {
+        return false;
+    }
     $conn = pkDBConnect();
     if (!$conn) {
         return false;
@@ -77,6 +83,12 @@ function addFeed($pkid)
 
 function checkFeed($pkid)
 {
+    if (!ctype_alpha($pkid)) {
+        return false;
+    }
+    if (!strlen($pkid) == 5 && !strlen($pkid) != 6) {
+        return false;
+    }
     $conn = pkDBConnect();
     if (!$conn) {
         return false;
@@ -95,6 +107,12 @@ function checkFeed($pkid)
 
 function removeFeed($pkid)
 {
+    if (!ctype_alpha($pkid)) {
+        return false;
+    }
+    if (!strlen($pkid) == 5 && !strlen($pkid) != 6) {
+        return false;
+    }
     $conn = pkDBConnect();
     if (!$conn) {
         return false;

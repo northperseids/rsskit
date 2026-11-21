@@ -4,7 +4,9 @@ So friends can use RSS feeds to see who's fronting!
 
 *Transparently, I don't have a huge personal infrastructure and I am one\* person! You're welcome to try to host your own version, though. You'll need a MySQL database and a web server capable of hosting PHP files, and the (very simple) database structure is included in `data/rsskit.sql`.*
 
-You will need to submit your token for authorization to create a feed, but tokens are not saved.
+You will need to submit your token for authorization to create a feed, but tokens are not saved and no private information can be retrieved from PluralKit in feeds.
+(With that said, you'll need the privacy for CURRENT FRONTER set to public.)
+
 Tokens are only used to make sure the actual owner of the PluralKit system is the only one who can register an RSS feed for that system. The only data saved is an automatically-generated database entry ID, your 5-6 letter PK ID, and the day you created the feed.
 
 ## Usage
